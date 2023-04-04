@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[10]:
-
-
 import tkinter as tk
 import pyaudio
 import librosa
@@ -337,6 +331,7 @@ self.root.destroy()
         '''Hides the options menu.'''
 
         self.options_window.destroy()
+
     def show_settings(self
     # Create settings window
     self.settings_window = tk.Toplevel(self.root)
@@ -654,16 +649,9 @@ def get_output_devices(self):
         if device_info["maxOutputChannels"] > 0:
             devices.append(device_info["name"])
     return devices
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
+while True:
+    try:
+        choice = int(input("Enter your choice: "))
+        break
+    except ValueError:
+        print("Invalid input. Please enter a number.")
