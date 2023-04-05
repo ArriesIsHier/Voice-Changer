@@ -14,11 +14,12 @@ import librosa.display
 import matplotlib.pyplot as plt
 from tkinter import ttk
 
-Install required packages if necessary
-def check_packages():
-packages = ['numpy', 'sounddevice', 'soundfile', 'scipy', 'matplotlib', 'librosa']
-installed = subprocess.check_output(['pip', 'freeze'])
-installed_packages = [pkg.decode().split('==')[0] for pkg in installed.split()]
+# Install required packages if necessary
+if install_packages:
+    # Install required packages if necessary
+    packages = ['numpy', 'sounddevice', 'soundfile', 'scipy', 'matplotlib', 'librosa']
+    subprocess.check_call([sys.executable, "-m", "pip", "install", *packages])
+
 
 go
 Copy code
